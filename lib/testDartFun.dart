@@ -62,7 +62,7 @@ class TestDartFun {
     list.forEach(printE);
 
     ///匿名函数
-    var a = (msg) => '${msg}test';
+    var a = (int msg) => '${msg}test';
     print(a(2));
     list.forEach((element) => print(element));
 

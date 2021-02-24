@@ -26,6 +26,10 @@ class TestDartOne {
     testBoolean();
 
     testList();
+
+    testMap();
+
+    testRuneAndSymbol();
   }
 
   void testStringToNumber() {
@@ -85,8 +89,6 @@ class TestDartOne {
 
     //list2[1] = 3; 会报错
 
-
-
     var set1 = {1, 2, 3};
 
     var set2 = <String>{};
@@ -96,10 +98,29 @@ class TestDartOne {
 
     set2.add("value");
 
-    //可以定位编译时常量  无法改变内部值
+    //可以定义编译时常量  无法改变内部值
     final set4 = const {1, 2, 3};
+  }
+
+  void testMap() {
+    var map1 = {"a": "1", "b": "1", "c": "1"};
+
+    map1["d"] = "2";
+
+    print(map1);
+    //可以定义编译时常量  无法改变内部值
+    final map2 = const {"a": "1", "b": "1", "c": "1"};
+    //map2["d"] = "2"; 错误
+  }
 
 
 
+  void testRuneAndSymbol() {
+    var clapping = '\u{1f44f}';
+    print(clapping); // 👏
+
+
+    var sym1 = Symbol('name');
+    print(sym1);
   }
 }

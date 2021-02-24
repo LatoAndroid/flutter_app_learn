@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_1/testDartOne.dart';
 
 import 'testDartFun.dart';
+import 'testDartObject.dart';
 
 void main() {
   var one = TestDartOne();
   var testFun = TestDartFun();
+  var testObj = TestDartObject();
 
   //one.publicFun();
-  testFun.mainOut();
+  //testFun.mainOut();
+  testObj.mainOut();
   //runApp(MyApp());
 }
 

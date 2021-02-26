@@ -3,21 +3,15 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class DemoWidget extends StatefulWidget {
-  IconData icon;
-
-  DemoWidget(this.icon);
+  DemoWidget();
 
   @override
   State<StatefulWidget> createState() {
-    return _DemoState(icon);
+    return _DemoState();
   }
 }
 
 class _DemoState extends State<DemoWidget> {
-  IconData icon;
-
-  _DemoState(this.icon);
-
   @override
   Widget build(BuildContext context) {
     return new Container(
@@ -41,21 +35,16 @@ class _DemoState extends State<DemoWidget> {
                 height: 100,
               ),
             ),
-
-
             Padding(padding: EdgeInsets.only(left: 10)),
-
             Expanded(
-              flex: 1,
-              child:  Text(
-                "我好帅啊啊啊啊啊啊啊啊啊啊啊啊",
-                style: TextStyle(color: Colors.grey, fontSize: 20.0),
-                overflow: TextOverflow.ellipsis,
-                textDirection: TextDirection.ltr,
-                maxLines: 1,
-              )
-            ),
-
+                flex: 1,
+                child: Text(
+                  "我好帅啊啊啊啊啊啊啊啊啊啊啊啊",
+                  style: TextStyle(color: Colors.grey, fontSize: 20.0),
+                  overflow: TextOverflow.ellipsis,
+                  textDirection: TextDirection.ltr,
+                  maxLines: 1,
+                )),
           ],
         ),
       ),

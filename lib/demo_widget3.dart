@@ -1,17 +1,17 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_1/demo_widget.dart';
 
-import 'demo_widget3.dart';
-
-class DemoWidget2 extends StatefulWidget {
+class DemoWidget3 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return _DemoState2();
+    return _DemoState3();
   }
 }
 
-class _DemoState2 extends State<DemoWidget2> {
+class _DemoState3 extends State<DemoWidget3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,18 +26,6 @@ class _DemoState2 extends State<DemoWidget2> {
           ),
         ),
 
-        // ignore: missing_return
-        body: FlatButton(
-          onPressed: (){
-            doPressed(context);
-          },
-          child: ListView.builder(itemBuilder: (context, index) {
-            return DemoWidget();
-          }),
-        ));
-  }
-
-  doPressed(BuildContext context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context)=> DemoWidget3()));
+    );
   }
 }
